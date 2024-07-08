@@ -1,4 +1,4 @@
-# Reproducing Figures from "Strong Persistent Cooling of the Stratosphere after the Hunga Eruption" by Stocker et al. (2024)
+# Scripts for the paper "Strong Persistent Cooling of the Stratosphere after the Hunga Eruption" by Stocker et al. (2024)
 
 This repository contains scripts used to reproduce the figures presented in the paper by Stocker et al. (2024) titled "Strong persistent cooling of the stratosphere after the Hunga eruption". These scripts process and visualize data to analyze the impact of the Hunga eruption on the stratosphere.
 
@@ -13,7 +13,7 @@ This repository contains scripts used to reproduce the figures presented in the 
 ## Prerequisites
 
 - Python 3.6 or higher
-- Required Python packages (can be installed via `requirements.txt` if provided, otherwise install manually):
+- Required Python packages (can be installed via `requirements.txt`):
   - `numpy`
   - `xarray`
   - `matplotlib`
@@ -49,7 +49,7 @@ python plot_monthly_residual_temperatrue_anomalies_from_RO_and_MLS.py --input_da
 
 ### 3. plot_Hunga_daily_RO_and_MLS_temperature.py
 
-This script processes and visualizes daily temperature anomalies, residual temperature anomalies after removing natural variability, and reconstructed natural variability following the Hunga eruption.
+This script processes and visualizes daily temperature anomalies, residual temperature anomalies after removing natural variability, and reconstructed natural temperature variability following the Hunga eruption.
 
 **Usage:**
 ```
@@ -83,47 +83,47 @@ python plot_RO_profiles_and_MLS_gridpints_within_water_vapor_plume.py --data_dir
 
 #### Figure 2
 ```
-python plot_Hunga_daily_RO_and_MLS_temperature.py ./data ./plots --meas_str RO --variable temperature_anomalies --overlay wind --altitudes 19 27 32 --add_tropopause
+python plot_Hunga_daily_RO_and_MLS_temperature.py ./data ./plots --meas_str RO --variable temperature_anomalies --overlay wind --add_tropopause
 ```
 
 #### Figure 3
 ```
-python plot_Hunga_daily_RO_and_MLS_temperature.py ./data ./plots --meas_str RO --variable reconstr_natural_variability --overlay wind --altitudes 19 27 32 --add_tropopause
+python plot_Hunga_daily_RO_and_MLS_temperature.py ./data ./plots --meas_str RO --variable reconstr_natural_variability --overlay wind --add_tropopause
 ```
 
 #### Figure 4
 ```
-python plot_monthly_residual_temperatrue_anomalies_from_RO_and_MLS.py --input_data_dir ./data --plot_dir ./plots --meas_str RO --altitudes 19 27 32 --dates 2022-02 2022-05 2022-12
+python plot_monthly_residual_temperatrue_anomalies_from_RO_and_MLS.py --input_data_dir ./data --plot_dir ./plots --meas_str RO
 
 ```
 #### Figure 5
 ```
-python plot_Hunga_daily_RO_and_MLS_temperature.py ./data ./plots --meas_str RO --variable residual_temperature_anomalies --overlay water_vapor --altitudes 19 27 32 --add_tropopause
+python plot_Hunga_daily_RO_and_MLS_temperature.py ./data ./plots --meas_str RO --variable residual_temperature_anomalies --overlay water_vapor --add_tropopause
 
 ```
-### Figure S1
+#### Figure S1
 ```
 python plot_RO_profiles_2022-01-15_within_early_eruption_plume.py --data_dir ./data --plot_dir ./plots --variable temperature_anom
 
 ```
-### Figure S2
+#### Figure S2
 ```
-python plot_Hunga_daily_RO_and_MLS_temperature.py ./data ./plots --meas_str RO --variable residual_temperature_anomalies --overlay ozone --altitudes 19 27 32 --add_tropopause
+python plot_Hunga_daily_RO_and_MLS_temperature.py ./data ./plots --meas_str RO --variable residual_temperature_anomalies --overlay ozone --add_tropopause
 
 ```
-### Figure S3
+#### Figure S3
 ```
 python plot_tropical_vs_extratropical_temperature_anomalies.py --data_dir ./data --plot_dir ./plots --alt_start 30 --alt_end 35
 
 ```
-### Figure S4
+#### Figure S4
 ```
-python plot_Hunga_daily_RO_and_MLS_temperature.py ./data ./plots --meas_str RO --variable residual_temperature_anomalies --overlay aerosol --altitudes 19 27 32 --add_tropopause
+python plot_Hunga_daily_RO_and_MLS_temperature.py ./data ./plots --meas_str RO --variable residual_temperature_anomalies --overlay aerosol --add_tropopause
 
 ```
-### Figure S5
+#### Figure S5
 ```
-python plot_Hunga_daily_RO_and_MLS_temperature.py ./data ./plots --meas_str MLS --variable residual_temperature_anomalies --overlay water_vapor --altitudes 19 27 32 --add_tropopause
+python plot_Hunga_daily_RO_and_MLS_temperature.py ./data ./plots --meas_str MLS --variable residual_temperature_anomalies --overlay water_vapor --add_tropopause
 
 ```
 

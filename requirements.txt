@@ -1,0 +1,9 @@
+numpy
+xarray
+matplotlib
+scipy
+pandas
+argparse
+rioxarray
+cartopy
+
