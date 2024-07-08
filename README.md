@@ -1,6 +1,6 @@
 # Scripts for the paper "Strong Persistent Cooling of the Stratosphere after the Hunga Eruption" by Stocker et al. (2024)
 
-This repository contains scripts used to reproduce the figures presented in the paper by Stocker et al. (2024) titled "Strong persistent cooling of the stratosphere after the Hunga eruption". These scripts process and visualize data to analyze the impact of the Hunga eruption on the stratosphere.
+This repository contains scripts used to reproduce the figures presented in the paper by Stocker et al. (2024) titled "Strong persistent cooling of the stratosphere after the Hunga eruption". These scripts process and visualize data from radio occultation (RO) and microwave limb sounder (MLS) to analyze the impact of the Hunga eruption on the stratosphere until December 2023.
 
 ## Repository Structure
 
