@@ -103,7 +103,7 @@ def plot_temperature(
         ds_wind = ds_wind.sel(time=slice(ds.time.min(), ds.time.max()))
 
     if overlay == "ozone":
-        ds_o3 = xr.open_dataset(f"/{data_dir}/MLS_O3_anomalies_lat_band.nc")
+        ds_o3 = xr.open_dataset(f"{data_dir}/MLS_O3_anomalies_lat_band.nc")
         ds_o3["altitude"] = ds_o3.altitude / 1000.0
         ds_o3 = ds_o3.sel(altitude=slice(17.5, 38)).sel(latitude=slice(-67.5, 67.5))
         ds_o3 = ds_o3.sel(time=slice(ds.time.min(), ds.time.max()))
@@ -219,7 +219,7 @@ def plot_temperature(
     ax1.set_ylabel("Altitude (km)")
     ax1.set_xlabel("Time")
     ax1.set_yticks(np.arange(16, 40, 2))
-    ax1.set_xlim("2021-12-01", "2023-12-16")
+    ax1.set_xlim(ds.time.min(), ds.time.max())
     ax1.grid(linestyle="dotted", linewidth=1.5)
     ax1.set_title(
         f"{plot_str} (mean {abs(lat_mean[0])}$^\circ$S to {abs(lat_mean[1])}$^\circ$N) "

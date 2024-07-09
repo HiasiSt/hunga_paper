@@ -420,12 +420,14 @@ def plot_resids_with_sig(ds, data_str, plot_alts, sig_dates, cbar_label, plot_di
     ax6.set_xlim(-45, 45)
     ax6.grid(linestyle="dotted", linewidth=1.5)
 
+    output_str = f"{plot_dir}/{data_str}_residual_temperature_anomalies_monthly_{plot_alts[0]}km_{plot_alts[1]}km_{plot_alts[2]}km_2005-01_2023-12.png"
     plt.savefig(
-        f"{plot_dir}/{data_str}_residual_temperature_anomalies_monthly_{plot_alts[0]}km_{plot_alts[1]}km_{plot_alts[2]}km_2005-01_2023-12.png",
+        f"{output_str}",
         bbox_inches="tight",
         dpi=300,
     )
-    plt.show()
+    print(f"Plot saved to: {output_str}")
+    # plt.show()
 
 
 def filter_to_maximum_anomaly(ts):
